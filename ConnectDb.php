@@ -1,8 +1,8 @@
 <?php
 $host = 'localhost';    //127.0.0.1
-$db = 'ManagingTablesAndDatabases'; //Lesson13(4.2)
-$user = 'root'; //root
-$password = null; //null
+$db = 'yegoshin'; //ManagingTablesAndDatabases
+$user = 'yegoshin'; //root
+$password = 'neto1339'; //null
 $charset = 'utf8';
 
 $pdo = new PDO("mysql:host=$host;dbname=$db;charset=$charset", $user, $password);

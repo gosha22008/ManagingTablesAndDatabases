@@ -15,8 +15,9 @@ PRIMARY KEY (`id`)
     return $statement->execute();
 }
 
-function showTables($pdo)
+function showTables($pdo,$dbname)
 {
+    $namedb = strtolower($dbname);
     $sql = "SHOW TABLES";
     $statement = $pdo->prepare($sql);
     $statement->execute();
@@ -24,7 +25,7 @@ function showTables($pdo)
 
         <tr>
             <td>
-                <a href="table.php?describe=<?= $row['Tables_in_managingtablesanddatabases'] ?>"><?= $row['Tables_in_managingtablesanddatabases'] ?></a>
+                <a href="table.php?describe=<?= $row['Tables_in_'."$namedb"] ?>"><?= $row['Tables_in_'."$namedb"] ?></a>
             </td>
         </tr>
 

@@ -53,7 +53,7 @@ newTable($pdo);
     <tr style="background-color: #ddf">
         <th>Name</th>
     </tr>
-    <?php showTables($pdo); ?>
+    <?php showTables($pdo,$db); ?>
     </tbody>
 </table>
 
